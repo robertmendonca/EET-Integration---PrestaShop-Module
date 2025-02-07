@@ -97,4 +97,12 @@ Pull requests are welcome! If you find an issue, open a GitHub issue or submit a
 
 ---
 
-📧 **Need help?** Open an issue on GitHub or contact support. 🚀  
+📧 **Need help?** Open an issue on GitHub or contact support. 🚀
+
+---
+
+## Support my work ☕  
+If this project helps you, consider buying me a coffee:  
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/robertmendonca)
+
