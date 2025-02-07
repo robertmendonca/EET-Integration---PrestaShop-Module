@@ -80,7 +80,30 @@ class EetApi
             $this->authenticate();
         }
 
-        $endpoint = $this->apiUrl . "/brand?brandId=" . $this->brandId;
+        // Get multiple brand IDs from the module configuration (comma-separated)
+        $brandIdsConfig = Configuration::get('EET_API_BRAND_ID');
+        $brandIds = explode(',', $brandIdsConfig);
+        $brandIds = array_map('trim', $brandIds); // Remove extra spaces
+
+        $allProducts = [];
+
+        foreach ($brandIds as $brandId) {
+            $products = $this->fetchProductsByBrand($brandId); // Calls a helper function
+
+            if (!empty($products)) {
+                $allProducts = array_merge($allProducts, $products);
+            }
+        }
+
+        return $allProducts;
+    }
+
+    /**
+     * Fetch products for a specific brand ID (keeps getProducts() unchanged)
+     */
+    private function fetchProductsByBrand($brandId)
+    {
+        $endpoint = $this->apiUrl . "/brand?brandId=" . $brandId;
 
         $ch = curl_init($endpoint);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -96,6 +119,7 @@ class EetApi
 
         return json_decode($response, true);
     }
+
 
     /**
      * Updates product stock and prices in PrestaShop using API data.
