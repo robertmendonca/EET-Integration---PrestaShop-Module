@@ -1,88 +1,100 @@
-# EET-Integration---PrestaShop-Module
+# **EET Integration - PrestaShop Module**  
 
-This module allows you to synchronize products from the EET API with your PrestaShop store. It fetches product data, updates stock levels, and manages pricing automatically to keep your catalog up to date.
+![PrestaShop](https://img.shields.io/badge/PrestaShop-8.x-blue.svg)  
+🔄 **Sync products from the EET API to PrestaShop automatically.**  
 
-🛠 Installation
-To install the module in your PrestaShop store:
+---
 
-Access your Admin Panel:
+## **📌 Features**  
 
-Go to Modules > Module Manager in the PrestaShop admin panel.
-Upload the Module:
+✅ **Automated Product Updates** – Sync stock, prices, and descriptions.  
+✅ **Easy Configuration** – Enter your API credentials and start syncing.  
+✅ **Manual & Automatic Sync** – Update products on demand or let the module handle it.  
+✅ **Image Handling** – Automatically downloads and assigns product images.  
+✅ **Seamless Integration** – Works within PrestaShop’s admin panel.  
 
-Click on Upload a module.
-Select the eetintegration.zip file.
-Complete Installation:
+---
 
-Wait for the installation to finish.
-The module will appear under Advanced Parameters > EET Integration.
-Configure the API Settings:
+## **🛠 Installation**  
 
-Enter your EET API credentials and the Brand ID to begin synchronization.
-⚙️ Configuration
-Before using the module, you need to configure it with your EET API credentials:
+### **1. Upload the Module**
+- Go to **Modules > Module Manager** in your PrestaShop admin panel.  
+- Click **Upload a module** and select the `eetintegration.zip` file.  
+- Wait for the installation to complete.  
 
-Required Settings:
-API Username & Password
+### **2. Configure the API Settings**
+- Navigate to **Advanced Parameters > EET Integration**.  
+- Enter your **EET API Username, Password, and Brand ID**.  
+- Click **Save** to apply the settings.  
 
-Enter the credentials provided by EET Group to access their API.
-Brand ID
+---
 
-Define the brand ID to specify which products should be synchronized.
-How to Configure:
-Go to Advanced Parameters > EET Integration in the PrestaShop admin panel.
-Fill in the API details and Save the settings.
-🔄 How It Works (Product Synchronization Process)
-Once configured, the module automatically retrieves and updates product data using the EET API. You can also manually trigger synchronization from the admin panel.
+## **⚙️ Configuration**  
 
-Synchronization Process:
-Fetch Product Data
+### **Required Settings:**
+| Setting            | Description                                         |
+|--------------------|-----------------------------------------------------|
+| **API Username**   | Your EET API username.                             |
+| **API Password**   | Your EET API password.                             |
+| **Brand ID**       | The brand whose products you want to sync.         |
 
-The module connects to the EET API and fetches products associated with the given Brand ID.
-Check Stock Levels
+---
 
-Only products with local stock ≥ 5 will be considered for synchronization.
-Update Existing Products
+## **🔄 How It Works**  
 
-If a product with the same reference (Item ID) exists in PrestaShop, the module updates:
-Stock quantity
-Product price
-Descriptions
-Create New Products (If Not Found)
+### **1. Fetch Product Data**
+- The module connects to the **EET API** and retrieves products for the specified **Brand ID**.  
 
-If the product doesn’t exist in PrestaShop, it will be created automatically with default settings.
-Image Handling
+### **2. Validate Stock**
+- Only products with **local stock ≥ 5** will be synchronized.  
 
-If the API provides product images, they will be downloaded and assigned to the product.
-Completion
+### **3. Update or Create Products**
+- **If the product exists in PrestaShop** (based on Item ID), it updates:  
+  - Stock quantity  
+  - Price  
+  - Descriptions  
 
-A confirmation message will appear after synchronization, showing the number of updated and added products.
-📌 How to Manually Sync Products
-Go to the Admin Panel
+- **If the product does not exist**, it is created with default settings.  
 
-Navigate to Advanced Parameters > EET Integration.
-Click the "Sync Now" Button
+### **4. Image Handling**
+- If the API provides product images, they are automatically downloaded and assigned.  
 
-This will trigger a manual synchronization of products from the EET API.
-Wait for the Process to Finish
+### **5. Confirmation**
+- A message will appear showing the number of updated and added products.  
 
-You will see a status message with the result of the sync process.
-❓ Troubleshooting
-Why aren’t my products syncing?
-✔ Ensure that your API credentials are correct.
-✔ Check that the Brand ID is valid.
-✔ Verify that the API returns product data.
+---
 
-Why aren’t images appearing?
-✔ Confirm that the EET API provides image URLs.
-✔ Check if your server allows external image downloads.
+## **📌 How to Manually Sync Products**  
 
-📌 Features & Benefits
-✅ Automated product updates – Keep stock, prices, and descriptions updated.
-✅ Easy configuration – Simply enter your API details and start syncing.
-✅ Manual & Automatic Sync – Update products on demand or let the module handle it.
-✅ PrestaShop Admin Integration – Fully integrated into the PrestaShop admin panel.
+1. Go to **Advanced Parameters > EET Integration**.  
+2. Click the **Sync Now** button.  
+3. Wait for the synchronization to complete.  
 
-This module is designed to simplify EET product management in PrestaShop, ensuring your store always has the latest product information. 🚀
+A message will confirm the update status.  
 
-If you have any issues, feel free to open an issue on GitHub or contact support. 💬
+---
+
+## **❓ Troubleshooting**  
+
+### **Why aren’t my products syncing?**  
+✔ Ensure your **API credentials** are correct.  
+✔ Verify that the **Brand ID** is valid.  
+✔ Confirm that the **EET API** is returning product data.  
+
+### **Why aren’t images appearing?**  
+✔ Check if the **EET API provides image URLs**.  
+✔ Make sure your server allows **external image downloads**.  
+
+---
+
+## **📜 License**  
+This module is licensed under the **MIT License** – feel free to modify and distribute.  
+
+---
+
+## **🤝 Contributing**  
+Pull requests are welcome! If you find an issue, open a GitHub issue or submit a fix.  
+
+---
+
+📧 **Need help?** Open an issue on GitHub or contact support. 🚀  
