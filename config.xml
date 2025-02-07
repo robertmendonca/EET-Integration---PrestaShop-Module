@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>eetintegration</name>
+    <displayName>EET Integration</displayName>
+    <version>1.0.0</version>
+    <author>Robert Mendonça</author>
+    <description>Synchronize products from the EET API with PrestaShop.</description>
+    <tab>administration</tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+</module>
