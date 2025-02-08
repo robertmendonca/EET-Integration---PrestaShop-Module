@@ -105,4 +105,4 @@ Pull requests are welcome! If you find an issue, open a GitHub issue or submit a
 ## Support my work ☕  
 If this project helps you, consider buying me a coffee:  
 
-[![Buy Me a Coffee](https://media.giphy.com/media/513lZvPf6khjIQFibF/giphy.gif)](https://www.buymeacoffee.com/robertmendonca)
+[![Buy Me a Coffee](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2BGG2ieJRHQufZ6RtcgdERA8KNweHYiB8jg&s)](https://www.buymeacoffee.com/robertmendonca)
